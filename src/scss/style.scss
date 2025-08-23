@@ -1,0 +1,9 @@
+@use "./fonts.scss";
+
+$mainColor: #36ac4c;
+
+body {
+    h1 {
+        color: $mainColor;
+    }
+}
