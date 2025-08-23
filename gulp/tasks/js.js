@@ -24,12 +24,6 @@ export function js(done) {
         )
         .pipe(app.gulp.dest(app.path.srcFolder + "/js/fromTS"))
         .pipe(
-            app.gulp.src([
-                app.path.src.js,
-                "!" + app.path.srcFolder + "/js/fromTS/**/*.*",
-            ])
-        )
-        .pipe(
             babel({
                 presets: ["@babel/env"],
             })
