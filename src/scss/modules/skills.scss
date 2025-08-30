@@ -1,3 +1,4 @@
+@use "../base/variables";
 @use "../ui/button";
 
 .skills {
@@ -13,7 +14,7 @@
   }
   .skills__grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-areas:
       "speaking writing reading"
       "speaking listening listening";
@@ -27,23 +28,35 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 22px;
+
     background-color: #f5f5f5;
     border-radius: 10px;
     height: 100%;
+    .skill-card__img-conteiner img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .skill-card__info {
+      padding: 0 43px 43px;
+    }
   }
 
   .skill-card:first-child {
-    padding-top: 35px;
     grid-area: speaking;
     align-self: flex-start;
     justify-content: flex-start;
+
+    .skill-card__img-conteiner {
+      max-width: 390px;
+    }
   }
   .skill-card:nth-child(2) {
     padding-top: 0px;
     grid-area: writing;
     .skill-card__img-conteiner {
       align-self: flex-end;
+      max-width: 293px;
     }
     .skill-card__title {
       margin-top: -45px;
@@ -54,12 +67,23 @@
     grid-area: reading;
     .skill-card__img-conteiner {
       align-self: flex-start;
+      max-width: 371px;
     }
   }
   .skill-card:last-child {
     grid-area: listening;
     padding: 44px 25px 44px 44px;
     flex-direction: row-reverse;
+    justify-content: center;
+
+    .skill-card__img-conteiner {
+      max-width: 382px;
+      flex-basis: 100%;
+    }
+    .skill-card__info {
+      padding: 0;
+      padding-right: 10px;
+    }
     .skill-card__desr-container {
       margin-bottom: 25px;
     }
@@ -86,9 +110,6 @@
 
   .skill-card__desr-container p + p {
     margin-top: 1.5em;
-    font-size: 16px;
-    color: #8f95a5;
-    font-weight: 400;
   }
 
   .skill-card__button {
@@ -96,5 +117,333 @@
     font-size: 20px;
     font-weight: 500;
     padding: 15px 20px;
+  }
+}
+
+@media (max-width: variables.$mediaTablet) {
+  .skills {
+    margin-bottom: 106px;
+    .skills__title {
+      font-size: 36px;
+    }
+    .skills__grid {
+      gap: 13px;
+    }
+    .skill-card {
+      .skill-card__info {
+        padding: 0 28px 28px;
+      }
+    }
+
+    .skill-card:first-child {
+      .skill-card__img-conteiner {
+        max-width: 260px;
+      }
+    }
+    .skill-card:nth-child(2) {
+      .skill-card__img-conteiner {
+        max-width: 205px;
+      }
+      .skill-card__title {
+        margin-top: -75px;
+      }
+    }
+    .skill-card:nth-child(3) {
+      .skill-card__img-conteiner {
+        max-width: 243px;
+      }
+    }
+    .skill-card:last-child {
+      padding: 0 18px 34px 28px;
+
+      .skill-card__img-conteiner {
+        max-width: 254px;
+      }
+      .skill-card__info {
+        padding-right: 8px;
+      }
+      .skill-card__desr-container {
+        margin-bottom: 11px;
+      }
+    }
+
+    .skill-card__title {
+      font-size: 22px;
+      line-height: 3.64;
+    }
+
+    .skill-card__desr-container {
+      margin-bottom: 30px;
+    }
+
+    .skill-card__desr-container p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .skill-card__button {
+      min-width: 196px;
+      font-size: 18px;
+      padding: 16px 16px;
+    }
+  }
+}
+
+@media (max-width: variables.$mediaSmallTablet) {
+  .skills {
+    margin-bottom: 52px;
+    .skills__title {
+      font-size: 30px;
+    }
+    .skills__grid {
+      gap: 10px;
+    }
+    .skill-card {
+      .skill-card__info {
+        padding: 0 18px 18px;
+      }
+    }
+
+    .skill-card:first-child {
+      .skill-card__img-conteiner {
+        max-width: 214px;
+      }
+    }
+    .skill-card:nth-child(2) {
+      .skill-card__img-conteiner {
+        max-width: 200px;
+      }
+      .skill-card__title {
+        margin-top: -25px;
+      }
+    }
+    .skill-card:nth-child(3) {
+      .skill-card__img-conteiner {
+        max-width: 216px;
+      }
+    }
+    .skill-card:last-child {
+      padding: 0 0 17px 22px;
+
+      .skill-card__img-conteiner {
+        max-width: 202px;
+      }
+      .skill-card__info {
+        padding-right: 5px;
+      }
+      .skill-card__desr-container {
+        margin-bottom: 6px;
+      }
+    }
+
+    .skill-card__title {
+      font-size: 20px;
+      line-height: 4;
+    }
+
+    .skill-card__desr-container {
+      margin-bottom: 13px;
+    }
+
+    .skill-card__desr-container p {
+      font-size: 13px;
+    }
+
+    .skill-card__button {
+      min-width: 142px;
+      font-size: 16px;
+      padding: 14px 14px;
+    }
+  }
+}
+
+@media (max-width: variables.$mediaMobile) {
+  .skills {
+    margin-bottom: 52px;
+    .skills__title {
+      font-size: 30px;
+      margin-bottom: 34px;
+    }
+    .skills__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-areas:
+        "speaking writing"
+        "reading listening";
+      gap: 34px 30px;
+    }
+    .skill-card {
+      align-items: flex-start;
+      min-height: 534px;
+      .skill-card__info {
+        padding: 0 16px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        height: 100%;
+      }
+    }
+
+    .skill-card:first-child {
+      .skill-card__img-conteiner {
+        max-width: 185px;
+      }
+    }
+    .skill-card:nth-child(2) {
+      .skill-card__img-conteiner {
+        max-width: 182px;
+        align-self: flex-start;
+        padding-left: 23px;
+      }
+      .skill-card__title {
+        margin-top: 25px;
+      }
+    }
+    .skill-card:nth-child(3) {
+      .skill-card__img-conteiner {
+        max-width: 198px;
+      }
+
+      .skill-card__title {
+        margin-top: 7px;
+      }
+    }
+    .skill-card:last-child {
+      flex-direction: column;
+      padding: 0 16px 16px;
+
+      .skill-card__img-conteiner {
+        max-height: 137px;
+        align-self: center;
+      }
+      .skill-card__info {
+        padding-right: 0;
+      }
+      .skill-card__desr-container {
+        margin-bottom: 0;
+        margin-bottom: 1.5em;
+      }
+    }
+
+    .skill-card__title {
+      font-size: 18px;
+      line-height: 4.45;
+    }
+
+    .skill-card__desr-container {
+      margin-bottom: 1.5em;
+    }
+
+    .skill-card__desr-container p {
+      font-size: 12px;
+    }
+
+    .skill-card__button {
+      min-width: auto;
+      font-size: 14px;
+      padding: 14px 14px;
+      margin-top: auto;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .skills {
+    .skill-card__button {
+      font-size: 12px;
+      padding: 10px 5px;
+    }
+  }
+}
+
+@media (max-width: variables.$mediaSmallMobile) {
+  .skills {
+    margin-bottom: 50px;
+    .skills__title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    .skills__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        "speaking"
+        "writing"
+        "reading"
+        "listening";
+      gap: 21px;
+    }
+    .skill-card {
+      align-items: center;
+      min-height: auto;
+      .skill-card__info {
+        padding: 0 13px 13px;
+      }
+      .skill-card__img-conteiner {
+        align-self: center;
+      }
+
+      .skill-card__title {
+        margin-top: 10px;
+      }
+    }
+
+    .skill-card:first-child {
+      .skill-card__img-conteiner {
+        max-width: 213px;
+        align-self: center;
+      }
+    }
+    .skill-card:nth-child(2) {
+      .skill-card__img-conteiner {
+        max-width: 204px;
+        align-self: center;
+        padding-left: 0;
+      }
+      .skill-card__title {
+        margin-top: 10px;
+      }
+    }
+    .skill-card:nth-child(3) {
+      .skill-card__img-conteiner {
+        max-width: 236px;
+        align-self: center;
+      }
+
+      .skill-card__title {
+        margin-top: 10px;
+      }
+    }
+    .skill-card:last-child {
+      flex-direction: column;
+      padding: 0 16px 16px;
+
+      .skill-card__img-conteiner {
+        max-height: 232px;
+        align-self: center;
+      }
+    }
+
+    .skill-card__desr-container p {
+      font-size: 13px;
+    }
+
+    .skill-card__button {
+      min-width: 148px;
+      font-size: 14px;
+      padding: 14px 12px;
+    }
+  }
+}
+
+@media (max-width: 240px) {
+  .skills {
+    .skill-card__button {
+      min-width: 78px;
+      font-size: 10px;
+      padding: 10px 5px;
+    }
   }
 }
