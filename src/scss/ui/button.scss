@@ -13,6 +13,7 @@
   padding: 17px 57px;
   color: variables.$buttonColor;
   transition: variables.$transition;
+  white-space: nowrap;
 }
 .button:hover,
 .button:active {
@@ -20,16 +21,16 @@
   color: variables.$hoverButtonColor;
 }
 
-.button--big,
-.button--big:visited {
+.button--black,
+.button--black:visited {
   transition: variables.$transition;
   background-color: #263238;
   font-size: 36px;
   color: #dbdbdb;
   font-weight: 400;
 }
-.button--big:hover,
-.button--big:active {
+.button--black:hover,
+.button--black:active {
   background-color: #dbdbdb;
   color: #263238;
 }
@@ -41,8 +42,8 @@
     color: variables.$buttonColor;
   }
 
-  .button--big:hover,
-  .button--big:active {
+  .button--black:hover,
+  .button--black:active {
     background-color: #263238;
     color: #dbdbdb;
   }
