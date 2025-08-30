@@ -1,5 +1,9 @@
 $mainBackgroundColor: #e5e5e5;
 
+$hoverButtonBg: #263238;
+$buttonColor: rgb(0, 0, 0);
+$hoverButtonColor: rgb(224, 224, 224);
+
 $hoverLinkColor: rgb(71, 71, 71);
 $activeLinkColor: rgb(71, 71, 71);
 $visitedLinkColor: rgb(71, 71, 71);
@@ -7,6 +11,7 @@ $visitedLinkColor: rgb(71, 71, 71);
 $border-color: #263238;
 
 $containerWidth: 1340px;
+$containerPadding: 0 30px;
 $transition: all 0.3s;
 $mainPadding: 0 30px;
 

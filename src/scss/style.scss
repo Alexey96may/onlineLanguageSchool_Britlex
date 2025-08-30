@@ -2,45 +2,46 @@
 @use "base/reset";
 @use "./fonts";
 @use "./modules/header";
+@use "./modules/main";
 @use "./modules/footer";
 
 body {
-    font-family: "Poppins", "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    min-height: 110vh;
-    background-color: variables.$mainBackgroundColor;
-    transition: variables.$transition;
+  font-family: "Poppins", "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  min-height: 110vh;
+  background-color: variables.$mainBackgroundColor;
+  transition: variables.$transition;
 }
 
 .inactive_field {
-    background-color: #52646d;
+  background-color: #52646d;
 }
 
 .inactive_button {
-    pointer-events: none;
-    cursor: auto;
+  pointer-events: none;
+  cursor: auto;
 }
 
 .appear {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    transition: variables.$transition;
+  text-decoration: none;
+  color: black;
+  transition: variables.$transition;
 }
 a:hover {
-    color: variables.$hoverLinkColor;
+  color: variables.$hoverLinkColor;
 }
 
 a:active {
-    color: variables.$activeLinkColor;
+  color: variables.$activeLinkColor;
 }
 
 a:visited {
-    color: variables.$visitedLinkColor;
+  color: variables.$visitedLinkColor;
 }

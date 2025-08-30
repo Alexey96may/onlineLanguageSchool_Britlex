@@ -4,6 +4,7 @@
 header .container {
   padding: variables.$mainPadding;
   padding-top: 67px;
+  margin-bottom: 67px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +12,7 @@ header .container {
 }
 .container {
   max-width: variables.$containerWidth;
+  padding: variables.$containerPadding;
   margin-right: auto;
   margin-left: auto;
 }
@@ -89,6 +91,7 @@ header .container {
 @media (max-width: variables.$mediaTablet) {
   header .container {
     padding-top: 40px;
+    margin-bottom: 40px;
   }
   .navigation ul {
     display: flex;
@@ -108,6 +111,7 @@ header .container {
   header .container {
     padding: variables.$mainPadding;
     padding-top: 55px;
+    margin-bottom: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -179,6 +183,7 @@ header .container {
 @media (max-width: variables.$mediaMobile) {
   header .container {
     padding-top: 44px;
+    margin-bottom: 0;
   }
   .header__navigation {
     width: 100%;

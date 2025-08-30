@@ -1,21 +1,49 @@
 @use "../base/variables";
 
-.button {
+.button,
+.button:visited {
   display: block;
+  cursor: pointer;
   border-color: variables.$border-color;
   border-width: 2px;
+  font-family: Poppins;
   border-style: solid;
   border-radius: 5px;
   font-size: 24px;
   padding: 17px 57px;
-  color: #000000;
+  color: variables.$buttonColor;
+  transition: variables.$transition;
 }
-.button:hover {
-  background-color: variables.$hoverLinkColor;
-}
+.button:hover,
 .button:active {
-  color: #000000;
+  background-color: variables.$hoverButtonBg;
+  color: variables.$hoverButtonColor;
 }
-.button:visited {
-  color: #000000;
+
+.button--big,
+.button--big:visited {
+  transition: variables.$transition;
+  background-color: #263238;
+  font-size: 36px;
+  color: #dbdbdb;
+  font-weight: 400;
+}
+.button--big:hover,
+.button--big:active {
+  background-color: #dbdbdb;
+  color: #263238;
+}
+
+@media (max-width: variables.$mediaMobile) {
+  .button:hover,
+  .button:active {
+    background-color: unset;
+    color: variables.$buttonColor;
+  }
+
+  .button--big:hover,
+  .button--big:active {
+    background-color: #263238;
+    color: #dbdbdb;
+  }
 }
