@@ -1,0 +1,80 @@
+@use "../base/variables";
+
+.pricing {
+  margin-bottom: 257px;
+  .pricing__title {
+    font-size: 48px;
+    color: #000000;
+    font-weight: 600;
+    line-height: calc(80 / 48);
+    text-align: center;
+    margin-bottom: 83px;
+  }
+
+  .pricing__offers {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.offer {
+  width: 427px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10px;
+  flex: 1;
+  .offer__img {
+    height: 340px;
+    margin-bottom: 29px;
+  }
+  .offer__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    .offer__title {
+      font-size: 30px;
+      color: #263238;
+      margin: 0;
+      font-weight: 600;
+      line-height: 48px;
+      margin-bottom: 19px;
+      flex-grow: 1;
+    }
+    .offer__descriptions {
+      flex-grow: 1;
+      margin-bottom: 29px;
+      p {
+        font-size: 20px;
+        margin: 0;
+        color: variables.$secondaryTextColor;
+        font-weight: 400;
+      }
+    }
+    .offer-price {
+      background-color: #eeeeee;
+      align-self: flex-start;
+      padding: 10px 23px;
+
+      span {
+        font-size: 30px;
+        color: #263238;
+        font-weight: 400;
+      }
+
+      span.offer-price__duration {
+        font-size: 18px;
+        color: #546269;
+        margin-left: 25px;
+        vertical-align: super;
+      }
+    }
+  }
+}
+
+.offer-price__currency {
+}
+.offer-price__value {
+}
