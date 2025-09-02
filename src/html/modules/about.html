@@ -11,18 +11,8 @@
         </p>
       </div>
       <div class="about__stat">
-        <div class="numerocity">
-          <div class="numerocity__how-many">800</div>
-          <div class="numerocity__what">Pupils</div>
-        </div>
-        <div class="numerocity">
-          <div class="numerocity__how-many">18</div>
-          <div class="numerocity__what">Teachers</div>
-        </div>
-        <div class="numerocity">
-          <div class="numerocity__how-many">6</div>
-          <div class="numerocity__what">Foreign languages</div>
-        </div>
+        @@include('../ui/numerocity.html', {"name": "Pupils", "number": "800"}) @@include('../ui/numerocity.html', {"name": "Teachers", "number": "18"})
+        @@include('../ui/numerocity.html', {"name": "Foreign languages", "number": "6"})
       </div>
     </div>
     <div class="about__image">

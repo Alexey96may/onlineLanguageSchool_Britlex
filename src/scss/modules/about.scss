@@ -1,4 +1,5 @@
 @use "../base/variables";
+@use "../ui/numerocity";
 
 .about .container {
   display: flex;
@@ -44,22 +45,6 @@
 
   .numerocity + .numerocity {
     margin-left: 10px;
-  }
-}
-
-.numerocity {
-  .numerocity__how-many {
-    font-size: 48px;
-    color: #2a3246;
-    font-weight: 600;
-    line-height: calc(80 / 48);
-    text-align: center;
-  }
-  .numerocity__what {
-    font-size: 20px;
-    color: #8f95a5;
-    font-weight: 400;
-    text-align: center;
   }
 }
 

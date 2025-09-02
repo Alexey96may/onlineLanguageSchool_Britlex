@@ -2,55 +2,18 @@
   <div class="container">
     <h2 class="skills__title">Skills</h2>
     <div class="skills__grid">
-      <div class="skill-card">
-        <div class="skill-card__img-conteiner">
-          <img src="../../img/speaking_skill.avif" alt="Speaking language" class="skill-card__img" />
-        </div>
-        <div class="skill-card__info">
-          <h3 class="skill-card__title">Speaking</h3>
-          <div class="skill-card__desr-container">
-            <p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
-            <p>Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.</p>
-          </div>
-          <button class="button button--black skill-card__button">Learn more</button>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__img-conteiner">
-          <img src="../../img/writing_skill.avif" alt="Writing language" class="skill-card__img" />
-        </div>
-        <div class="skill-card__info">
-          <h3 class="skill-card__title">Writing</h3>
-          <div class="skill-card__desr-container">
-            <p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
-          </div>
-          <button class="button button--black skill-card__button">Learn more</button>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__img-conteiner">
-          <img src="../../img/reading_skill.avif" alt="Reading language" class="skill-card__img" />
-        </div>
-        <div class="skill-card__info">
-          <h3 class="skill-card__title">Reading</h3>
-          <div class="skill-card__desr-container">
-            <p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
-          </div>
-          <button class="button button--black skill-card__button">Learn more</button>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-card__img-conteiner">
-          <img src="../../img/listening_skill.avif" alt="Listening language" class="skill-card__img" />
-        </div>
-        <div class="skill-card__info">
-          <h3 class="skill-card__title">Listening</h3>
-          <div class="skill-card__desr-container">
-            <p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</p>
-          </div>
-          <button class="button button--black skill-card__button">Learn more</button>
-        </div>
-      </div>
+      
+      @@include('../ui/skill-card.html', { "skill_img_src": "../../img/speaking_skill.avif", "skill_img_alt": "Speaking language", "skill_name": "Speaking",
+      "skill_description": "<\p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only</\p><\p>Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.</\p>", "skill_button_text": "Learn more"})
+
+            @@include('../ui/skill-card.html', { "skill_img_src": "../../img/writing_skill.avif", "skill_img_alt": "Writing language", "skill_name": "Writing",
+      "skill_description": "<\p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only.</\p>", "skill_button_text": "Learn more"})
+
+            @@include('../ui/skill-card.html', { "skill_img_src": "../../img/reading_skill.avif", "skill_img_alt": "Reading language", "skill_name": "Reading",
+      "skill_description": "<\p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only.</\p>", "skill_button_text": "Learn more"})
+
+            @@include('../ui/skill-card.html', { "skill_img_src": "../../img/listening_skill.avif", "skill_img_alt": "Listening language", "skill_name": "Listening",
+      "skill_description": "<\p>Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only.</\p>", "skill_button_text": "Learn more"})
     </div>
   </div>
 </section>
