@@ -1,0 +1,19 @@
+.offer-price {
+  background-color: #eeeeee;
+  align-self: flex-start;
+  padding: 10px 23px;
+  border-radius: 5px;
+
+  span {
+    font-size: 30px;
+    color: #263238;
+    font-weight: 400;
+  }
+
+  span.offer-price__duration {
+    font-size: 18px;
+    color: #546269;
+    margin-left: 25px;
+    vertical-align: super;
+  }
+}
