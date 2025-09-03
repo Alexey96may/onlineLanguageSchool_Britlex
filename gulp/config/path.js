@@ -28,7 +28,7 @@ export const path = {
     ts: `${srcFolder}/ts/**/*.ts`,
     js: `${srcFolder}/ts/**/*.js`,
     jest: `${srcFolder}/ts/tests/**/*.ts`,
-    images: `${srcFolder}/img/**/*.{jpg, jpeg, png, gif, webp, svg, ico}`,
+    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg,ico}`,
     scss: `${srcFolder}/scss/**/*.scss`,
     html: `${srcFolder}/**/*.html`,
     files: `${srcFolder}/files/**/*.*`,
