@@ -79,6 +79,11 @@
     display: inline-block;
     padding: 25px 82px;
     margin-left: 12px;
+    transition: variables.$transition;
+
+    &:hover {
+      color: variables.$buttonColor;
+    }
   }
 }
 
