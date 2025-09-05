@@ -3,6 +3,8 @@
   align-self: flex-start;
   padding: 10px 23px;
   border-radius: 5px;
+  line-height: 1.5;
+  font-size: 30px;
 
   span {
     font-size: 30px;
@@ -14,6 +16,6 @@
     font-size: 18px;
     color: #546269;
     margin-left: 25px;
-    vertical-align: super;
+    vertical-align: middle;
   }
 }
