@@ -1,0 +1,152 @@
+@use "../base/variables";
+
+.footer {
+  &__logo {
+    width: 106px;
+    height: 54px;
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 0 64px 0;
+  }
+
+  &__hr {
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: #191919;
+    margin: 0;
+  }
+}
+
+.footer-nav {
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item a {
+    font-size: 24px;
+    font-family: Poppins;
+    color: #8f95a5;
+    font-weight: 400;
+  }
+
+  li + li {
+    padding-left: 6px;
+  }
+
+  li + li::before {
+    content: "•";
+    margin-right: 6px;
+    font-size: 24px;
+    font-family: Poppins;
+    color: #8f95a5;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: variables.$mediaTablet) {
+  .footer {
+    &__logo {
+      width: 89px;
+      height: 45px;
+    }
+    &__flex-wrapper {
+      padding: 22px 0 24px 0;
+    }
+  }
+
+  .footer-nav {
+    &__item a {
+      font-size: 16px;
+    }
+
+    li + li::before {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: variables.$mediaSmallTablet) {
+  .footer {
+    &__logo {
+      width: 85px;
+      height: 45px;
+    }
+    &__flex-wrapper {
+      padding: 18px 0 15px 0;
+    }
+  }
+
+  .footer-nav {
+    &__item a {
+      font-size: 13px;
+    }
+
+    li + li::before {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: variables.$mediaMobile) {
+  .footer {
+    &__logo {
+      width: 89px;
+      height: 45px;
+    }
+
+    &__flex-wrapper {
+      padding: 24px 0 26px 0;
+    }
+  }
+
+  .footer-nav {
+    &__item a {
+      font-size: 12px;
+    }
+
+    li + li::before {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 495px) {
+  .footer {
+    &__logo {
+      width: 71px;
+      height: 36px;
+    }
+
+    &__flex-wrapper {
+      flex-direction: column;
+      gap: 15px;
+      padding: 26px 0 15px 0;
+    }
+  }
+
+  .footer-nav {
+    margin-bottom: 46px;
+    ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item a {
+      font-size: 11px;
+    }
+
+    li + li::before {
+      font-size: 11px;
+    }
+  }
+}
