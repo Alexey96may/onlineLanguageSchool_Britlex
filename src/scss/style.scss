@@ -14,6 +14,9 @@ body {
   transition: variables.$transition;
 }
 
+#activeField {
+  transition: variables.$transition;
+}
 .inactive_field {
   background-color: rgba(82, 100, 109, 0.61);
   width: 100%;
