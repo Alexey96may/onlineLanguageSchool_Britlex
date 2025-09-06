@@ -18,8 +18,7 @@ header {
 
 header .container {
   padding: variables.$mainPadding;
-  margin-top: 40px;
-  padding-top: 27px;
+  padding-top: 67px;
   padding-bottom: 27px;
   display: flex;
   justify-content: space-between;
@@ -107,8 +106,7 @@ header .container {
 
 @media (max-width: variables.$mediaTablet) {
   header .container {
-    margin-top: 30px;
-    padding-top: 10px;
+    padding-top: 40px;
     padding-bottom: 10px;
   }
   .navigation ul {
@@ -127,8 +125,7 @@ header .container {
 
 @media (max-width: variables.$mediaSmallTablet) {
   header .container {
-    margin-top: 40px;
-    padding-top: 15px;
+    padding-top: 55px;
     padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
@@ -200,8 +197,7 @@ header .container {
 
 @media (max-width: variables.$mediaMobile) {
   header .container {
-    margin-top: 34px;
-    padding-top: 10px;
+    padding-top: 44px;
     padding-bottom: 10px;
   }
   .header__navigation {
@@ -227,8 +223,7 @@ header .container {
 
 @media (max-width: variables.$mediaSmallMobile) {
   header .container {
-    margin-top: 15px;
-    padding-top: 5px;
+    padding-top: 20px;
     padding-bottom: 5px;
   }
   .navigation__item a {
