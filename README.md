@@ -2,6 +2,6 @@
 
 Pet project, simple **single page website** for learning languages.
 
-## Design
+## Original Design Layout
 
-![Alt-Original Design Layout](/design.jpeg)
+![Alt-Original Design Layout](/design.jpg)
