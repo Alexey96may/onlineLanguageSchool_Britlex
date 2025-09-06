@@ -27,6 +27,11 @@ export class NavFix {
   }
 
   fixNavigation(): void {
+    setTimeout(() => {
+      if (this.headerElement) {
+        this.headerElement.style.transform = "translateY(0)";
+      }
+    }, 500);
     this.headerElement?.classList.add("header--fixed");
   }
 }

@@ -24,7 +24,13 @@ var NavFix = /** @class */ (function () {
         return false;
     };
     NavFix.prototype.fixNavigation = function () {
+        var _this = this;
         var _a;
+        setTimeout(function () {
+            if (_this.headerElement) {
+                _this.headerElement.style.transform = "translateY(0)";
+            }
+        }, 500);
         (_a = this.headerElement) === null || _a === void 0 ? void 0 : _a.classList.add("header--fixed");
     };
     return NavFix;

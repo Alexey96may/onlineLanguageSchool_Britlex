@@ -4,10 +4,11 @@
 header {
   position: relative;
   transition: variables.$transition;
+  background-color: variables.$mainBackgroundColor;
   &.header--fixed {
-    background-color: variables.$mainBackgroundColor;
     position: sticky;
     top: 0;
+    transform: translateY(-228px);
     left: 0;
     width: 100%;
     z-index: 1;
