@@ -35,7 +35,7 @@
   color: #263238;
 }
 
-@media (max-width: variables.$mediaMobile) {
+@media (hover: none) {
   .button:hover,
   .button:active {
     background-color: unset;

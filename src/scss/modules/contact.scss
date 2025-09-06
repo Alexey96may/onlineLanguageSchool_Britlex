@@ -5,6 +5,7 @@
 }
 .contact .container {
   margin-bottom: 133px;
+  padding-top: 140px;
   display: grid;
   grid-template-columns: minmax(0, auto) minmax(0, 1fr);
   grid-template-areas:
@@ -108,7 +109,8 @@
 
 @media (max-width: variables.$mediaTablet) {
   .contact .container {
-    margin-bottom: 249px;
+    margin-bottom: 174px;
+    padding-top: 75px;
     column-gap: 30px;
   }
   .contact__img {
@@ -222,7 +224,7 @@
     font-weight: 600;
     line-height: calc(80 / 30);
     margin: 0;
-    margin: 83px 0;
+    margin: 0 0 83px 0;
     order: 0;
     align-self: center;
   }
@@ -309,7 +311,7 @@
   .contact__title {
     font-size: 24px;
     line-height: calc(80 / 24);
-    margin: 31px 0;
+    margin: 0 0 31px 0;
   }
   .contact__descr {
     margin-bottom: 31px;

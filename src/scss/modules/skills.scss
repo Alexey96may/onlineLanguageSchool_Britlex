@@ -3,7 +3,8 @@
 @use "../ui/skill-card";
 
 .skills {
-  margin-bottom: 282px;
+  margin-bottom: 162px;
+  padding-top: 120px;
   .skills__title {
     font-size: 48px;
     font-family: Poppins;
@@ -12,7 +13,7 @@
     line-height: 80px;
     letter-spacing: 0%;
     text-align: center;
-    margin: 1.5em 0;
+    margin: 0 0 1.5em 0;
   }
   .skills__grid {
     display: grid;
@@ -77,6 +78,7 @@
 @media (max-width: variables.$mediaTablet) {
   .skills {
     margin-bottom: 106px;
+    padding-top: 75px;
     .skills__title {
       font-size: 36px;
     }

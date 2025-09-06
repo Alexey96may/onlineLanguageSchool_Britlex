@@ -2,7 +2,8 @@
 @use "../ui/offer-price";
 
 .pricing {
-  margin-bottom: 257px;
+  margin-bottom: 117px;
+  padding-top: 120px;
   .pricing__title {
     margin: 0;
     font-size: 48px;
@@ -10,7 +11,7 @@
     font-weight: 600;
     line-height: calc(80 / 48);
     text-align: center;
-    margin: 83px 0;
+    margin: 0 0 83px 0;
   }
 
   .pricing__offers {
@@ -66,10 +67,11 @@
 
 @media (max-width: variables.$mediaTablet) {
   .pricing {
-    margin-bottom: 145px;
+    margin-bottom: 70px;
+    padding-top: 75px;
     .pricing__title {
       line-height: calc(80 / 36);
-      margin: 47px 0;
+      margin: 0 0 47px 0;
       font-size: 36px;
     }
   }
@@ -112,7 +114,7 @@
     margin-bottom: 65px;
     .pricing__title {
       line-height: calc(80 / 30);
-      margin: 61px 0;
+      margin: 0 0 61px 0;
       font-size: 30px;
     }
   }
@@ -157,7 +159,7 @@
     .pricing__title {
       font-size: 30px;
       line-height: calc(80 / 30);
-      margin: 54px 0;
+      margin: 0 0 54px 0;
     }
 
     .pricing__offers {
@@ -219,7 +221,7 @@
     .pricing__title {
       font-size: 24px;
       line-height: calc(80 / 24);
-      margin: 49px 0;
+      margin: 0 0 49px 0;
     }
 
     .pricing__offers {
