@@ -160,6 +160,10 @@
     .about__title--mobile {
       display: block;
       order: 1;
+      line-height: calc(80 / 30);
+      font-size: 30px;
+      margin: 0;
+      margin-bottom: 0.5em;
     }
     .about__info {
       order: 3;
