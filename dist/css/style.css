@@ -566,7 +566,7 @@ header .container {
     background-color: #e5e5e5;
     padding: 0 30px;
     width: 50%;
-    max-height: 90vh;
+    max-height: 100vh;
     box-sizing: border-box;
     z-index: 1;
     visibility: hidden;
