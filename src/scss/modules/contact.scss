@@ -1,5 +1,8 @@
 @use "../base/variables";
 
+.contact {
+  margin-top: 20px;
+}
 .contact .container {
   margin-bottom: 133px;
   display: grid;
@@ -34,7 +37,7 @@
   font-weight: 600;
   line-height: calc(80 / 48);
   margin: 0;
-  margin-bottom: 37px;
+  margin: 37px 0;
   align-self: end;
 }
 .contact__descr {
@@ -114,7 +117,7 @@
   .contact__title {
     font-size: 36px;
     line-height: calc(80 / 36);
-    margin-bottom: 0px;
+    margin: 0px;
   }
   .contact__descr {
     margin-bottom: 34px;
@@ -219,7 +222,7 @@
     font-weight: 600;
     line-height: calc(80 / 30);
     margin: 0;
-    margin-bottom: 83px;
+    margin: 83px 0;
     order: 0;
     align-self: center;
   }
@@ -306,7 +309,7 @@
   .contact__title {
     font-size: 24px;
     line-height: calc(80 / 24);
-    margin-bottom: 31px;
+    margin: 31px 0;
   }
   .contact__descr {
     margin-bottom: 31px;

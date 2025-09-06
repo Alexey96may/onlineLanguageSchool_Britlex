@@ -16,7 +16,7 @@
     flex-basis: 50%;
 
     .hero__title {
-      margin-bottom: 40px;
+      margin: 40px 0;
       padding-right: 121.24px;
       position: relative;
       h1 {
@@ -74,7 +74,7 @@
       max-width: 420px;
 
       .hero__title {
-        margin-bottom: 27px;
+        margin: 27px 0;
         padding-right: 71px;
         h1 {
           font-size: 48px;
@@ -117,7 +117,7 @@
       max-width: 340px;
 
       .hero__title {
-        margin-bottom: 25px;
+        margin: 25px 0;
         padding-right: 51px;
         h1 {
           max-width: 217px;
@@ -165,7 +165,7 @@
       align-items: stretch;
 
       .hero__title {
-        margin-bottom: 26px;
+        margin: 26px 0;
         padding-right: 0;
         h1 {
           max-width: 100%;
@@ -211,7 +211,7 @@
     }
     &__message-container {
       .hero__title {
-        margin-bottom: 20px;
+        margin: 20px 0;
         h1 {
           font-size: 24px;
           line-height: 36px;
