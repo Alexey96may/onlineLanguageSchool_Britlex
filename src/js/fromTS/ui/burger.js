@@ -12,24 +12,36 @@ var Burger = /** @class */ (function () {
             event.stopPropagation();
             _this.isMenuOpen = true;
             _this.bBH_classesToggle();
+            if (_this.BODY) {
+                _this.BODY.style.overflow = "hidden";
+            }
         });
         (_b = this.CANCEL_BUTON) === null || _b === void 0 ? void 0 : _b.addEventListener("click", function (event) {
             event.stopPropagation();
             _this.isMenuOpen = false;
             _this.bBH_classesToggle();
+            if (_this.BODY) {
+                _this.BODY.style.overflow = "auto";
+            }
         });
         (_c = this.BODY) === null || _c === void 0 ? void 0 : _c.addEventListener("click", function (event) {
             var _a;
             if (event.target.closest("#headerNav")) {
-                if (((_a = event.target.tagName) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === "a") {
+                if (_this.isMenuOpen && ((_a = event.target.tagName) === null || _a === void 0 ? void 0 : _a.toLowerCase()) === "a") {
                     _this.isMenuOpen = false;
                     _this.bBH_classesToggle();
+                    if (_this.BODY) {
+                        _this.BODY.style.overflow = "auto";
+                    }
                 }
                 return;
             }
             if (_this.isMenuOpen) {
                 _this.isMenuOpen = false;
                 _this.bBH_classesToggle();
+                if (_this.BODY) {
+                    _this.BODY.style.overflow = "auto";
+                }
             }
         });
     }

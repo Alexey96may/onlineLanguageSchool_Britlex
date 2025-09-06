@@ -11,19 +11,28 @@ export class Burger {
       event.stopPropagation();
       this.isMenuOpen = true;
       this.bBH_classesToggle();
+      if (this.BODY) {
+        this.BODY.style.overflow = "hidden";
+      }
     });
 
     this.CANCEL_BUTON?.addEventListener("click", (event) => {
       event.stopPropagation();
       this.isMenuOpen = false;
       this.bBH_classesToggle();
+      if (this.BODY) {
+        this.BODY.style.overflow = "auto";
+      }
     });
 
     this.BODY?.addEventListener("click", (event) => {
       if ((event.target as HTMLElement).closest("#headerNav")) {
-        if ((event.target as HTMLElement).tagName?.toLowerCase() === "a") {
+        if (this.isMenuOpen && (event.target as HTMLElement).tagName?.toLowerCase() === "a") {
           this.isMenuOpen = false;
           this.bBH_classesToggle();
+          if (this.BODY) {
+            this.BODY.style.overflow = "auto";
+          }
         }
         return;
       }
@@ -31,6 +40,9 @@ export class Burger {
       if (this.isMenuOpen) {
         this.isMenuOpen = false;
         this.bBH_classesToggle();
+        if (this.BODY) {
+          this.BODY.style.overflow = "auto";
+        }
       }
     });
   }
