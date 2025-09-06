@@ -1959,6 +1959,9 @@ header .container {
     padding: 12px 18px;
     margin-left: 6px;
   }
+  .contact__form .contact__submit:hover {
+    color: #ffffff;
+  }
 }
 @media (max-width: 575px) {
   .contact .container {
