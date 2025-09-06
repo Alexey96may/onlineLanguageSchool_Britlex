@@ -11,18 +11,14 @@ export class Burger {
       event.stopPropagation();
       this.isMenuOpen = true;
       this.bBH_classesToggle();
-      if (this.BODY) {
-        this.BODY.style.overflow = "hidden";
-      }
+      this.changeOverflow(this.BODY, "hidden");
     });
 
     this.CANCEL_BUTON?.addEventListener("click", (event) => {
       event.stopPropagation();
       this.isMenuOpen = false;
       this.bBH_classesToggle();
-      if (this.BODY) {
-        this.BODY.style.overflow = "auto";
-      }
+      this.changeOverflow(this.BODY, "auto");
     });
 
     this.BODY?.addEventListener("click", (event) => {
@@ -30,9 +26,7 @@ export class Burger {
         if (this.isMenuOpen && (event.target as HTMLElement).tagName?.toLowerCase() === "a") {
           this.isMenuOpen = false;
           this.bBH_classesToggle();
-          if (this.BODY) {
-            this.BODY.style.overflow = "auto";
-          }
+          this.changeOverflow(this.BODY, "auto");
         }
         return;
       }
@@ -40,9 +34,7 @@ export class Burger {
       if (this.isMenuOpen) {
         this.isMenuOpen = false;
         this.bBH_classesToggle();
-        if (this.BODY) {
-          this.BODY.style.overflow = "auto";
-        }
+        this.changeOverflow(this.BODY, "auto");
       }
     });
   }
@@ -51,5 +43,11 @@ export class Burger {
     this.ACTIVE_FIELD?.classList.toggle("inactive_field");
     this.BURGER_BUTTON?.classList.toggle("inactive_button");
     this.HEADER_NAV?.classList.toggle("appear");
+  }
+
+  changeOverflow(element: HTMLElement | null, overflowStyle: string): void {
+    if (element) {
+      element.style.overflow = overflowStyle;
+    }
   }
 }
