@@ -231,7 +231,6 @@
     }
     .skill-card {
       align-items: flex-start;
-      min-height: 534px;
       .skill-card__info {
         padding: 0 16px 16px;
         display: flex;
@@ -271,7 +270,6 @@
       padding: 0 16px 16px;
 
       .skill-card__img-conteiner {
-        max-height: 137px;
         align-self: center;
       }
       .skill-card__info {
