@@ -3,15 +3,16 @@
 
 header {
   position: relative;
-  transition: variables.$transition;
+  transition: transform 0.3s;
   background-color: variables.$mainBackgroundColor;
+  z-index: 6;
   &.header--fixed {
     position: sticky;
     top: 0;
     transform: translateY(-228px);
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 6;
   }
 }
 
@@ -140,7 +141,7 @@ header .container {
   .nav-logo {
     display: block;
     border-bottom: solid 2px #c4c4c4;
-    padding-bottom: 21px;
+    padding-bottom: 10px;
     margin-top: 55px;
     width: 100%;
   }
@@ -157,7 +158,7 @@ header .container {
     background-color: #e5e5e5;
     padding: variables.$mainPadding;
     width: 50%;
-    height: 101vh;
+    height: calc(99vh + 40px);
     box-sizing: border-box;
     z-index: 1;
     visibility: hidden;
@@ -165,6 +166,7 @@ header .container {
     transition: variables.$transition;
     padding-bottom: 30px;
     overflow-y: auto;
+    translate: 0 -40px;
   }
   .header__navigation ul {
     display: flex;

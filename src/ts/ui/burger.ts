@@ -2,6 +2,7 @@ export class Burger {
   BURGER_BUTTON = document.getElementById("burger");
   CANCEL_BUTON = document.getElementById("cancel");
   ACTIVE_FIELD = document.getElementById("activeField");
+  HEADER = document.getElementById("header");
   BODY = document.querySelector("body");
   HEADER_NAV = document.getElementById("headerNav");
   isMenuOpen = false;
@@ -41,6 +42,7 @@ export class Burger {
 
   bBH_classesToggle(): void {
     this.ACTIVE_FIELD?.classList.toggle("inactive_field");
+    this.HEADER?.classList.toggle("inactive_header");
     this.BURGER_BUTTON?.classList.toggle("inactive_button");
     this.HEADER_NAV?.classList.toggle("appear");
   }
