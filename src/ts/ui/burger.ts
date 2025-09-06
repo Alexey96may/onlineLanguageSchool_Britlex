@@ -1,6 +1,7 @@
 export class Burger {
   BURGER_BUTTON = document.getElementById("burger");
   CANCEL_BUTON = document.getElementById("cancel");
+  ACTIVE_FIELD = document.getElementById("activeField");
   BODY = document.querySelector("body");
   HEADER_NAV = document.getElementById("headerNav");
   isMenuOpen = false;
@@ -20,6 +21,10 @@ export class Burger {
 
     this.BODY?.addEventListener("click", (event) => {
       if ((event.target as HTMLElement).closest("#headerNav")) {
+        if ((event.target as HTMLElement).tagName?.toLowerCase() === "a") {
+          this.isMenuOpen = false;
+          this.bBH_classesToggle();
+        }
         return;
       }
 
@@ -31,7 +36,7 @@ export class Burger {
   }
 
   bBH_classesToggle(): void {
-    this.BODY?.classList.toggle("inactive_field");
+    this.ACTIVE_FIELD?.classList.toggle("inactive_field");
     this.BURGER_BUTTON?.classList.toggle("inactive_button");
     this.HEADER_NAV?.classList.toggle("appear");
   }

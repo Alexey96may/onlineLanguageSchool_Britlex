@@ -1,24 +1,26 @@
-<header>
+<header id="header">
   <div class="container">
     <div class="logo">
       <a href="#"><img src="./img/britlex.svg" alt="britlex" /></a>
     </div>
-    <nav class="navigation header__navigation" id="headerNav">
-      <div class="burger-cancel" id="cancel">
-        <img src="./img/cancel.svg" alt="cancel" />
-      </div>
-      <ul>
-        <li class="logo nav-logo navigation__item">
-          <a href="#"><img src="./img/britlex.svg" alt="britlex" /></a>
-        </li>
-        <li class="navigation__item"><a href="#">Home</a></li>
-        <li class="navigation__item"><a href="#skills">Skills</a></li>
-        <li class="navigation__item"><a href="#about">About Us</a></li>
-        <li class="navigation__item"><a href="#pricing">Pricing</a></li>
-        <li class="navigation__item"><a href="#contact">Contacts</a></li>
-        <li class="navigation__item">@@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button"})</li>
-      </ul>
-    </nav>
+    <div id="activeField">
+      <nav class="navigation header__navigation" id="headerNav">
+        <div class="burger-cancel" id="cancel">
+          <img src="./img/cancel.svg" alt="cancel" />
+        </div>
+        <ul>
+          <li class="logo nav-logo navigation__item">
+            <a href="#"><img src="./img/britlex.svg" alt="britlex" /></a>
+          </li>
+          <li class="navigation__item"><a href="#">Home</a></li>
+          <li class="navigation__item"><a href="#skills">Skills</a></li>
+          <li class="navigation__item"><a href="#about">About Us</a></li>
+          <li class="navigation__item"><a href="#pricing">Pricing</a></li>
+          <li class="navigation__item"><a href="#contact">Contacts</a></li>
+          <li class="navigation__item">@@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button"})</li>
+        </ul>
+      </nav>
+    </div>
     <div class="burger" id="burger"><span></span></div>
     @@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button header__button--mobile"})
   </div>

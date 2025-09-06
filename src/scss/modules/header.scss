@@ -1,10 +1,23 @@
 @use "../base/variables";
 @use "../ui/button";
 
+header {
+  position: relative;
+  transition: variables.$transition;
+  &.header--fixed {
+    background-color: variables.$mainBackgroundColor;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
 header .container {
   padding: variables.$mainPadding;
   padding-top: 67px;
-  margin-bottom: 67px;
+  padding-bottom: 67px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +104,7 @@ header .container {
 @media (max-width: variables.$mediaTablet) {
   header .container {
     padding-top: 40px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
   .navigation ul {
     display: flex;
@@ -111,7 +124,7 @@ header .container {
   header .container {
     padding: variables.$mainPadding;
     padding-top: 55px;
-    margin-bottom: 55px;
+    padding-bottom: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -142,11 +155,9 @@ header .container {
     width: 50%;
     min-height: 100vh;
     z-index: 1;
-    //display: none;
     visibility: hidden;
     opacity: 0;
     transition: variables.$transition;
-
     padding-bottom: 30px;
   }
   .header__navigation ul {
@@ -183,7 +194,7 @@ header .container {
 @media (max-width: variables.$mediaMobile) {
   header .container {
     padding-top: 44px;
-    margin-bottom: 0;
+    padding-bottom: 44px;
   }
   .header__navigation {
     width: 100%;
@@ -209,6 +220,7 @@ header .container {
 @media (max-width: variables.$mediaSmallMobile) {
   header .container {
     padding-top: 20px;
+    padding-bottom: 20px;
   }
   .navigation__item a {
     font-size: 22px;

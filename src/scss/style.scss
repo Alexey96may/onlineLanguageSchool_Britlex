@@ -15,7 +15,13 @@ body {
 }
 
 .inactive_field {
-  background-color: #52646d;
+  background-color: rgba(82, 100, 109, 0.61);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .inactive_button {
