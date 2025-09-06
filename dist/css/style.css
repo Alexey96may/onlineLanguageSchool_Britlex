@@ -1665,7 +1665,7 @@ header .container {
 }
 @media (max-width: 575px) {
   .pricing {
-    margin-bottom: 163px;
+    margin-bottom: 83px;
   }
   .pricing .pricing__title {
     font-size: 30px;
