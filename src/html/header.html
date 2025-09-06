@@ -1,27 +1,29 @@
 <header id="header">
   <div class="container">
-    <div class="logo">
+    <div class="logo" aria-label="Our logo">
       <a href="#"><img src="./img/britlex.svg" alt="britlex" /></a>
     </div>
     <div id="activeField">
-      <nav class="navigation header__navigation" id="headerNav">
-        <div class="burger-cancel" id="cancel">
+      <nav class="navigation header__navigation" id="headerNav" aria-label="Main navigation section">
+        <div class="burger-cancel" id="cancel" aria-label="Cancel menu button">
           <img src="./img/cancel.svg" alt="cancel" />
         </div>
         <ul>
           <li class="logo nav-logo navigation__item">
-            <a href="#"><img src="./img/britlex.svg" alt="britlex" /></a>
+            <a href="#"><img src="./img/britlex.svg" alt="britlex" aria-label="to start section" /></a>
           </li>
-          <li class="navigation__item"><a href="#">Home</a></li>
-          <li class="navigation__item"><a href="#skills">Skills</a></li>
-          <li class="navigation__item"><a href="#about">About Us</a></li>
-          <li class="navigation__item"><a href="#pricing">Pricing</a></li>
-          <li class="navigation__item"><a href="#contact">Contacts</a></li>
-          <li class="navigation__item">@@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button"})</li>
+          <li class="navigation__item"><a href="#" aria-label="to start section">Home</a></li>
+          <li class="navigation__item"><a href="#skills" aria-label="to skills section">Skills</a></li>
+          <li class="navigation__item"><a href="#about" aria-label="to about us section">About Us</a></li>
+          <li class="navigation__item"><a href="#pricing" aria-label="to pricing section">Pricing</a></li>
+          <li class="navigation__item"><a href="#contact" aria-label="to contact section">Contacts</a></li>
+          <li class="navigation__item" aria-label="to contact section">
+            @@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button"})
+          </li>
         </ul>
       </nav>
     </div>
-    <div class="burger" id="burger"><span></span></div>
+    <div class="burger" id="burger" aria-label="Burger menu button"><span></span></div>
     @@include('./ui/button.html', { "link": "#contact", "text": "Let’s Talk", "class": "header__button header__button--mobile"})
   </div>
 </header>
