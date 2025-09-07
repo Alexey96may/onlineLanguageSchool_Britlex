@@ -11,31 +11,31 @@ export class Burger {
     this.BURGER_BUTTON?.addEventListener("click", (event) => {
       event.stopPropagation();
       this.isMenuOpen = true;
-      this.bBH_classesToggle();
       this.changeOverflow(this.BODY, "hidden");
+      this.bBH_classesToggle();
     });
 
     this.CANCEL_BUTON?.addEventListener("click", (event) => {
       event.stopPropagation();
       this.isMenuOpen = false;
-      this.bBH_classesToggle();
       this.changeOverflow(this.BODY, "auto");
+      this.bBH_classesToggle();
     });
 
     this.BODY?.addEventListener("click", (event) => {
       if ((event.target as HTMLElement).closest("#headerNav")) {
         if (this.isMenuOpen && (event.target as HTMLElement).tagName?.toLowerCase() === "a") {
           this.isMenuOpen = false;
-          this.bBH_classesToggle();
           this.changeOverflow(this.BODY, "auto");
+          this.bBH_classesToggle();
         }
         return;
       }
 
       if (this.isMenuOpen) {
         this.isMenuOpen = false;
-        this.bBH_classesToggle();
         this.changeOverflow(this.BODY, "auto");
+        this.bBH_classesToggle();
       }
     });
   }
